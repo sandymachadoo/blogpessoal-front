@@ -2,17 +2,21 @@
   "name": "blogpessoal",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rmdir /s /q dist && rmdir /s /q node_modules"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
+    "axios": "^1.7.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^7.1.2"
   },
   "devDependencies": {
