@@ -1,4 +1,4 @@
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
 
 function Footer() {
 
@@ -6,7 +6,7 @@ function Footer() {
 
     return (
         <>
-            <div className="flex justify-center bg-indigo-900 text-white">
+            <div className="flex justify-center bg-purple-900 text-white">
                 <div className="container flex flex-col items-center py-4">
                     <p className='text-xl font-bold'>
                             Blog Pessoal de Sandy Machado | Copyright: {data}
@@ -19,7 +19,6 @@ function Footer() {
                     <a href="https://www.instagram.com/sxndysm" target="_blank" rel="noopener noreferrer">
     <InstagramLogo size={48} weight='bold' />
   </a>
-                        <FacebookLogo size={48} weight='bold' />
                     </div>
                 </div>
             </div>
