@@ -2,14 +2,12 @@
   "name": "blogpessoal",
   "private": true,
   "version": "0.0.0",
-  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "clean": "rmdir /s /q dist && rmdir /s /q node_modules"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
@@ -18,6 +16,7 @@
     "react-dom": "^18.3.1",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^7.1.2",
+    "react-toastify": "^11.0.3",
     "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {
