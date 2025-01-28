@@ -4,27 +4,26 @@ import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostage
 function Home() {
     return (
         <>
-            <div
-                className="min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
-                style={{
-                    backgroundImage: "url('src/assets/pink.jpg')",
-                }}
-            >
-                <div className="container grid grid-cols-2 text-white">
+            <div className="min-h-screen w-full bg-pink-100 flex flex-col justify-center items-center">
+                <div className="container grid grid-cols-2 text-black">
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
-                        <h2 className="text-5xl font-bold font-[Poppins] text-pink-100 drop-shadow-lg transition-all hover:scale-105">
-                            Seja Bem Vindo!
+                        <h2 className="text-5xl font-bold font-[Poppins] drop-shadow-lg transition-all hover:scale-105">
+                            Seja Bem-Vindo!
                         </h2>
-                        <p className="text-2xl font-[Dancing Script] text-pink-200 drop-shadow-md italic transition-all hover:scale-105">
+                        <p className="text-2xl font-[Dancing Script] drop-shadow-md italic transition-all hover:scale-105">
                             Transforme seus pensamentos em palavras
                         </p>
 
                         <div className="flex justify-around gap-4">
-                            <ModalPostagem />
+                            <div className="border-4 border-pink-500 p-4 rounded">
+                                <ModalPostagem />
+                            </div>
                         </div>
                     </div>
 
-                    {/* Parte que exibia a imagem do tucano foi removida */}
+                    <div className="flex justify-center items-center">
+                        <img src="src/assets/tucano.jpg" alt="Turtle" className="w-96 h-auto shadow-lg rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl" />
+                    </div>
                 </div>
             </div>
 
