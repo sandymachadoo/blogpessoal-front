@@ -13,29 +13,28 @@ function Footer() {
     if (usuario.token !== "") {
 
         component = (
-
-            <div className="flex justify-center bg-green-900 text-white">
-                <div className="container flex flex-col items-center py-4">
-                    <p className='text-xl font-bold'>
-                        Blog Pessoal Generation | Copyright: {data}
+            <div className="flex justify-center bg-gradient-to-r from-purple-600 to-pink-500 text-white">
+                <div className="container flex flex-col items-center py-8 space-y-4">
+                    <p className='text-2xl font-bold text-center'>
+                        Blog Pessoal desenvolvido por Sandy Machado | Copyright: {data}
                     </p>
-                    <p className='text-lg'>Acesse nossas redes sociais</p>
-                    <div className='flex gap-2'>
-                        <a href="https://www.linkedin.com/in/sandy-machado-/" target="_blank">
-                            <LinkedinLogo size={48} weight='bold' />
+                    <p className='text-lg text-center'>Acesse minhas redes sociais</p>
+                    <div className='flex gap-6'>
+                        <a href="https://www.linkedin.com/in/sandy-machado-/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transform transition-all">
+                            <LinkedinLogo size={56} weight='bold' />
                         </a>
-                        <a href="https://www.instagram.com/sxndysm/#" target="_blank">
-                            <InstagramLogo size={48} weight='bold' />
+                        <a href="https://www.instagram.com/sxndysm/#" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transform transition-all">
+                            <InstagramLogo size={56} weight='bold' />
                         </a>
                     </div>
                 </div>
             </div>
-
         )
     }
+
     return (
         <>
-            { component }
+            {component}
         </>
     )
 }
