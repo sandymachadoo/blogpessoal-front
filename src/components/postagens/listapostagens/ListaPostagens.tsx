@@ -5,6 +5,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Postagem from "../../../models/Postagem";
 import { buscar } from "../../../services/Service";
 import { DNA } from "react-loader-spinner";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function ListaPostagens() {
 
@@ -32,7 +33,7 @@ function ListaPostagens() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            ToastAlerta("Você precisa estar logado","info")
             navigate('/');
         }
     }, [token])
@@ -42,7 +43,7 @@ function ListaPostagens() {
     }, [postagens.length])
 
     return (
-        <>
+        <div className="bg-[#6A1E55] py-8">
             {postagens.length === 0 && (
                 <DNA
                     visible={true}
@@ -64,8 +65,8 @@ function ListaPostagens() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
-}
+}    
 
 export default ListaPostagens;

@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './components/footer/Footer'
@@ -13,13 +14,20 @@ import ListaPostagens from './components/postagens/listapostagens/ListaPostagens
 import FormPostagem from './components/postagens/formpostagem/FormPostagem'
 import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPostagem'
 import Perfil from './pages/perfil/Perfil'
+import { ToastContainer } from 'react-toastify';
+
+console.log("Renderizando ToastContainer");
+
+<ToastContainer theme="colored" />
 
 function App() {
   return (
     <>
         <AuthProvider>
-        <BrowserRouter>
-          <Navbar />
+  <BrowserRouter>
+    <ToastContainer />
+    <Navbar />
+
           <div className="min-h-[80vh]">
             <Routes>
               <Route path="/" element={<Login />} />
