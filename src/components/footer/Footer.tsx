@@ -1,4 +1,4 @@
-import { FacebookLogo, GithubLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react'
 import { ReactNode, useContext } from 'react'
 import { AuthContext } from '../../contexts/AuthContext'
 
@@ -13,13 +13,11 @@ function Footer() {
     if (usuario.token !== "") {
 
         component = (
-
-            <div className="flex justify-center bg-[#F38C79] text-white">
-                <div className="container flex flex-col items-center py-4">
+            <div className="flex justify-center bg-[#DBDBDB] text-black">
+                <div className="container flex flex-col items-center py-8 animate-footer">
                     <p className='text-xl font-bold'>
                         Blog Pessoal | Copyright: {data}
                     </p>
-                    <p className='text-lg'>Acesse minhas redes sociais</p>
                     <div className='flex gap-2'>
                         <a href="https://www.linkedin.com/in/sandy-machado-" target="_blank">
                             <LinkedinLogo size={48} weight='bold' />
@@ -30,12 +28,12 @@ function Footer() {
                     </div>
                 </div>
             </div>
-
         )
     }
+
     return (
         <>
-            { component }
+            {component}
         </>
     )
 }

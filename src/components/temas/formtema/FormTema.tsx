@@ -70,7 +70,6 @@ function FormTema() {
                 } else {
                     ToastAlerta("Erro ao atualizar o tema.","erro")
                 }
-
             }
         } else {
             try {
@@ -84,7 +83,6 @@ function FormTema() {
                 } else {
                     ToastAlerta("Erro ao cadastrar o tema.","erro")
                 }
-
             }
         }
 
@@ -93,40 +91,40 @@ function FormTema() {
     }
 
     return (
-        <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
-                {id === undefined ? 'Cadastrar Tema' : 'Editar Tema'}
-            </h1>
+        <div className="min-h-screen bg-gradient-to-r from-[#09122C] to-[#872341] flex items-center justify-center">
+            <div className="w-full max-w-md px-8 py-6 bg-[#4C7B8B] rounded-2xl shadow-xl">
+                <h1 className="text-4xl text-center mb-8 text-white">
+                    {id === undefined ? 'Cadastrar Tema' : 'Editar Tema'}
+                </h1>
 
-            <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Descrição do Tema</label>
-                    <input
-                        type="text"
-                        placeholder="Descreva aqui seu tema"
-                        name='descricao'
-                        className="border-2 border-slate-700 rounded p-2"
-                        value={tema.descricao}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                    />
-                </div>
-                <button
-                    className="rounded text-slate-100 bg-indigo-400 
-                               hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
-                    type="submit">
-                    {isLoading ?
-                        <RotatingLines
-                            strokeColor="white"
-                            strokeWidth="5"
-                            animationDuration="0.75"
-                            width="24"
-                            visible={true}
-                        /> :
-                        <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
-
-                    }
-                </button>
-            </form>
+                <form className="flex flex-col gap-6" onSubmit={gerarNovoTema}>
+                    <div className="flex flex-col gap-4">
+                        <label htmlFor="descricao" className="text-white font-semibold">Descrição do Tema</label>
+                        <input
+                            type="text"
+                            placeholder="Descreva aqui seu tema"
+                            name='descricao'
+                            className="border-2 rounded-lg p-3 bg-white text-black focus:outline-none"
+                            value={tema.descricao}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        />
+                    </div>
+                    <button
+                        className="text-white bg-[#872341]  hover:bg-[#872341] w-full flex items-center justify-center py-2 rounded-lg transform transition-transform hover:scale-105"
+                        type="submit">
+                        {isLoading ? 
+                            <RotatingLines 
+                                strokeColor="white"
+                                strokeWidth="5"
+                                animationDuration="0.75"
+                                width="24"
+                                visible={true}
+                            /> :
+                            <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
+                        }
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }

@@ -7,6 +7,7 @@ import { buscar } from "../../../services/Service";
 import { DNA } from "react-loader-spinner";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
 
+
 function ListaPostagens() {
 
     const navigate = useNavigate();
@@ -43,7 +44,7 @@ function ListaPostagens() {
     }, [postagens.length])
 
     return (
-        <div className="bg-[#6A1E55] py-8">
+        <div className="min-h-screen bg-gradient-to-r from-[#09122C] to-[#872341] py-7">
             {postagens.length === 0 && (
                 <DNA
                     visible={true}
@@ -62,6 +63,7 @@ function ListaPostagens() {
                         {postagens.map((postagem) => (
                             <CardPostagens key={postagem.id} postagem={postagem} />
                         ))}
+                        
                     </div>
                 </div>
             </div>

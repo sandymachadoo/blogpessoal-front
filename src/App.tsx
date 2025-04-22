@@ -27,8 +27,7 @@ function App() {
   <BrowserRouter>
     <ToastContainer />
     <Navbar />
-
-          <div className="min-h-[80vh]">
+          <div className="min-h-[80vh] bg-gradient-to-r from-[#09122C] to-[#872341]">
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/home" element={<Home />} />
