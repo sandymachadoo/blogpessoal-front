@@ -24,13 +24,13 @@ function Perfil() {
     
     <img
       className='w-full h-50 object-cover'
-      src= "src/assets/capa.jpg" alt="Capa do Perfil"
+      src= "/assets/capa.jpg" alt="Capa do Perfil"
     />
 
     <div className="relative flex justify-center">
       <img
         className='rounded-full w-40 h-40 object-cover border-4 border-white absolute -top-20 shadow-md bg-white'
-        src={usuario.foto || 'src/assets/mulher.png'}
+        src={usuario.foto || '/assets/mulher.png'}
         alt={`Foto de perfil de ${usuario.nome}`}
       />
     </div>

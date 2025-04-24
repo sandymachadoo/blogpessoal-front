@@ -21,7 +21,7 @@ function Navbar() {
             <div className='w-full bg-[#DBDBDB] text-black flex justify-center py-4'>
                 <div className="container flex justify-between items-center text-lg">
                     <Link to='/home' className="flex items-center text-3xl font-bold">
-                        <img src="src/assets/flordelotus.png" alt="Logo" className="mr-2 w-10 h-10" />
+                        <img src="/assets/flordelotus.png" alt="Logo" className="mr-2 w-10 h-10" />
                         Blog Pessoal
                     </Link>
 

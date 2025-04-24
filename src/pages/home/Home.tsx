@@ -47,7 +47,7 @@ function Home() {
 
                     <div className="flex justify-center">
                         <img
-                            src="src/assets/flordelotus.png"
+                            src="/assets/flordelotus.png"
                             alt="Imagem de uma Flor de Lótus"
                             className="w-2/3"
                         />

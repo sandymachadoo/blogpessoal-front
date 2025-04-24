@@ -1,6 +1,6 @@
 .fundoLogin {
     background-color: #C599B6;
-    background-image: url("src/assets/coding.jpg");
+    background-image: url("/assets/coding.jpg");
     background-repeat: no-repeat;
     min-height: 100vh;
     width: 100%;
