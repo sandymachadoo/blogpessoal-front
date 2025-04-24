@@ -73,19 +73,19 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-gray-700 font-medium" htmlFor="usuario">Usuário</label>
+            <label className="text-gray-700 font-medium" htmlFor="usuario">E-mail</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
-              placeholder="Digite seu usuário"
+              placeholder="Digite seu e-mail"
               className="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-400"
               value={usuario.usuario || ''}
               onChange={atualizarEstado}
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-gray-700 font-medium" htmlFor="foto">Foto</label>
+            <label className="text-gray-700 font-medium" htmlFor="foto">Foto (Opcional)</label>
             <input
               type="text"
               id="foto"
